@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAM ALERT</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://viagemclub.com.br/wp-content/uploads/2021/08/barragem-de-itaipu-a-noite.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .chat {
+            width: 350px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background-color: #075e54;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .chat-body {
+            height: 300px;
+            background-color: #f5f5f5;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .no-messages {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #888;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            background-color: #dcf8c6;
+            padding: 10px;
+            border-radius: 10px;
+            margin-left: auto; /* Move para o lado direito */
+        }
+
+        .bot-message {
+            background-color: #cfe6ff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: auto; /* Move para o lado esquerdo */
+        }
+
+        .chat-footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-message {
+            flex: 1;
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .send-button {
+            background-color: #075e54;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background-color: #0c7b41;
+        }
+    </style>
+    <link rel="stylesheet" href="menu1.css">
+</head>
+<body background="https://viagemclub.com.br/wp-content/uploads/2021/08/barragem-de-itaipu-a-noite.jpg">
+    <div class="slideshow-container">
+        <input type="checkbox" id="checkbox">
+    <label class="btn" for="checkbox"><i class="fa fa-bars"></i><span color>Menu</span></label>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="sidebar">
+        <ul>
+            <li><a href="menu.html"><i class="fa fa-lightbulb-o"></i>Voltar ao Menu</a></li>
+            <li><a href="pagstartup.html"><i class="fa fa-globe"></i>Mapa de barragens</a></li>
+            <li><a href="videos.html"><i class="fa fa-tachometer"></i>Quiz</a></li>
+            <li><a href="sensor.html" class="fa fa-lightbulb-o"><i class="fa fa-line-chart"></i>Nossos Produtos</a></li>
+            <li><a href="imagens.html"><i class="fa fa-television"></i>Imagens</a></li>
+            <li><a href="notificacoes.html"><i class="fa fa-send"></i>Notificações</a></li>
+            <li><a href="tempo.html"><i class="fa fa-wpforms"></i>Tempo</a></li>
+            <li><a href="baragens.html"><i class="fa fa-paint-brush"></i>Sobre Barragens</a></li>
+            <li><a href="quemnossomos.html"><i class="fa fa-file-text-o"></i>Quem nós somos</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="container">
+        <div class="chat">
+            <div class="chat-header">Conversas com Dam Alert</div>
+            <div class="chat-body">
+                <div class="no-messages">Não há mensagens.</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" class="input-message" id="userMessage" placeholder="Digite uma mensagem...">
+                <button class="send-button" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("userMessage");
+            var messageText = messageInput.value.trim();
+
+            if (messageText !== "") {
+                var chatBody = document.querySelector(".chat-body");
+                var noMessages = document.querySelector(".no-messages");
+                noMessages.style.display = "none";
+                var newMessage = document.createElement("div");
+                newMessage.classList.add("message");
+                var userPhoto = document.createElement("div");
+                userPhoto.classList.add("user-photo");
+                var userMessage = document.createElement("div");
+                userMessage.classList.add("user-message");
+                userMessage.textContent = messageText;
+                newMessage.appendChild(userPhoto);
+                newMessage.appendChild(userMessage);
+                chatBody.appendChild(newMessage);
+
+                // Respostas automáticas do Dam Alert
+                setTimeout(function() {
+                    var botMessage = document.createElement("div");
+                    botMessage.classList.add("message");
+                    var botPhoto = document.createElement("div");
+                    botPhoto.classList.add("bot-photo");
+                    var botResponse = document.createElement("div");
+                    botResponse.classList.add("bot-message");
+
+                    switch (messageText.toLowerCase()) {
+                        case "o que é uma barragem?":
+                        case "barragem é o que?":
+                        case "barragem é o que":
+                        case "barragem":
+                        case "o que é uma barragem":
+                        case "oq é uma barragem?":
+                        case "oq e uma barragem?":
+                        case "oq é uma barragem":
+                        case "oq e uma barragem":
+                            var responses = [
+                                "Uma barragem é uma estrutura construída em rios ou córregos para reter água e formar reservatórios.",
+                                "Uma barragem é uma construção que visa armazenar água para diferentes propósitos, como abastecimento, geração de energia e controle de enchentes.",
+                                "Uma barragem é uma obra de engenharia civil utilizada para represar água em um determinado local.",
+                                "Uma barragem é uma estrutura que tem a finalidade de reter água em um reservatório, podendo ser utilizada para abastecimento humano, geração de energia, irrigação, entre outros.",
+                                "Uma barragem é uma construção que impede o fluxo natural de um curso de água, formando um reservatório."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "quais os tipos de barragens?":
+                        case "tipos de barragens?":
+                        case "tipos de barragens":
+                        case "quais os tipos de barragens":
+                        case "os tipos de barragens":
+                            var responses = [
+                                "Existem diferentes tipos de barragens, incluindo barragens de terra, barragens de concreto, barragens de enrocamento e barragens de arco.",
+                                "Os principais tipos de barragens são as de terra, concreto, enrocamento e arco.",
+                                "Barragens podem ser classificadas de acordo com o material utilizado em sua construção, sendo os principais tipos: terra, concreto, enrocamento e arco.",
+                                "Existem diversos tipos de barragens, como as de terra, concreto, enrocamento e arco, cada uma com suas características específicas e aplicações.",
+                                "Os tipos de barragens mais comuns são as de terra, concreto, enrocamento e arco, cada uma projetada de acordo com as condições geológicas e hidrológicas do local."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "como é feita a inspeção de uma barragem?":
+                        case "inspeção de barragem?":
+                            var responses = [
+                                "A inspeção de barragens envolve a avaliação visual, análise de dados de instrumentação, estudos geotécnicos e hidrológicos, entre outros métodos.",
+                                "A inspeção de barragens é realizada por meio de análises visuais, instrumentação, estudos geotécnicos e hidrológicos, buscando garantir a segurança e a integridade da estrutura.",
+                                "A inspeção de barragens é feita por meio de diferentes métodos, incluindo avaliações visuais, monitoramento por instrumentação e análises geotécnicas e hidrológicas.",
+                                "Para inspecionar uma barragem, são utilizados diversos métodos, como observação visual, análise de dados de instrumentação e estudos técnicos, visando garantir sua segurança e estabilidade.",
+                                "A inspeção de barragens é um processo que envolve a análise de diversos fatores, como condições geotécnicas, hidrológicas e estruturais, para garantir sua segurança e funcionamento adequado."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "o que é uma ruptura de barragem?":
+                        case "ruptura de barragem?":
+                            var responses = [
+                                "Uma ruptura de barragem é a falha catastrófica da estrutura da barragem, resultando na liberação repentina e violenta de grandes volumes de água.",
+                                "A ruptura de barragem ocorre quando a estrutura da barragem falha, resultando na liberação descontrolada de água e causando inundação nas áreas abaixo da barragem.",
+                                "A ruptura de barragem é um evento em que a estrutura da barragem se rompe, liberando uma grande quantidade de água de forma repentina e destrutiva.",
+                                "Uma ruptura de barragem é um evento grave em que a estrutura da barragem se rompe, causando uma inundação súbita e potencialmente catastrófica.",
+                                "A ruptura de barragem é um incidente em que a estrutura da barragem se rompe, resultando na liberação descontrolada de água e causando danos significativos à vida e à propriedade."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "quais são os riscos de uma ruptura de barragem?":
+                        case "quais são os riscos de uma ruptura de barragem":
+                        case "riscos de ruptura de barragem?":
+                        case "riscos de ruptura de barragem":
+                            var responses = [
+                                "Os riscos de uma ruptura de barragem incluem inundações súbitas, perda de vidas humanas, danos materiais, impactos ambientais e sociais.",
+                                "Uma ruptura de barragem pode resultar em inundações repentinas, perdas de vidas humanas, destruição de propriedades, danos ambientais e econômicos.",
+                                "Os riscos de uma ruptura de barragem incluem inundação rápida, perdas de vidas humanas, destruição de infraestrutura, danos ambientais e prejuízos econômicos.",
+                                "As consequências de uma ruptura de barragem podem incluir inundações devastadoras, perdas de vidas humanas, destruição de comunidades, danos ambientais e prejuízos econômicos.",
+                                "Os riscos associados a uma ruptura de barragem incluem inundações súbitas, destruição de propriedades, perda de vidas humanas, danos ambientais e impactos socioeconômicos."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "como posso saber se uma barragem está em risco?":
+                        case "barragem em risco?":
+                            var responses = [
+                                "Você pode ficar informado sobre o estado de segurança das barragens por meio de relatórios de inspeção, alertas de autoridades e notícias sobre o assunto.",
+                                "Para saber se uma barragem está em risco, é importante ficar atento a relatórios de inspeção, comunicados das autoridades e informações divulgadas pela imprensa.",
+                                "É possível saber se uma barragem está em risco acompanhando relatórios de inspeção, alertas de autoridades e comunicados de órgãos responsáveis pela segurança hídrica.",
+                                "Para verificar se uma barragem está em risco, é recomendável acompanhar relatórios de monitoramento, alertas das autoridades e informações disponíveis na mídia.",
+                                "Para saber se uma barragem está em risco, é importante estar atento a relatórios de inspeção, análises técnicas e alertas de autoridades responsáveis pela segurança hídrica."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "quais as medidas de segurança em caso de alerta de ruptura de barragem?":
+                        case "medidas de segurança em caso de ruptura de barragem?":
+                            var responses = [
+                                "Em caso de alerta de ruptura de barragem, siga as orientações das autoridades, evacue a área de risco imediatamente e busque abrigo em locais elevados.",
+                                "Em situação de alerta de ruptura de barragem, é fundamental seguir as orientações das autoridades, evacuar a área de risco e buscar abrigo em locais seguros e elevados.",
+                                "Se houver um alerta de ruptura de barragem, é importante agir rapidamente, seguir as orientações das autoridades e se deslocar para áreas seguras e elevadas.",
+                                "Em caso de alerta de ruptura de barragem, é essencial seguir as instruções das autoridades, evacuar a área ameaçada e buscar refúgio em locais seguros e elevados.",
+                                "Se houver um alerta de ruptura de barragem, é necessário agir com rapidez, evacuar a área de risco e buscar abrigo em locais seguros e elevados."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "como posso contribuir para a prevenção de rupturas de barragens?":
+                        case "prevenção de rupturas de barragens?":
+                            var responses = [
+                                "Você pode contribuir para a prevenção de rupturas de barragens denunciando problemas estruturais, apoiando medidas de segurança e fiscalizando o cumprimento das normas.",
+                                "Para ajudar na prevenção de rupturas de barragens, é importante estar atento a sinais de problemas estruturais, apoiar iniciativas de segurança e exigir o cumprimento das normas.",
+                                "Para contribuir com a prevenção de rupturas de barragens, é fundamental denunciar problemas estruturais, apoiar ações de fiscalização e conscientizar a comunidade sobre a importância da segurança hídrica.",
+                                "Você pode colaborar com a prevenção de rupturas de barragens reportando problemas estruturais, participando de iniciativas de segurança e cobrando das autoridades medidas eficazes de prevenção e fiscalização.",
+                                "Contribua para a prevenção de rupturas de barragens denunciando problemas, apoiando ações de fiscalização e promovendo a conscientização sobre a importância da segurança hídrica."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        // Adições
+                        case "oi":
+                        case "olá":
+                        case "ola" :
+                        case "eae":
+                        case "cole":
+                        case "oi tudo bem?":
+                        case "oii":
+                        case "salve":
+                        case "vizao":
+                        case " ":
+                        case ".":
+                        case "kole":
+                        case "kl":
+                            var responses = [
+                                "Olá! Como posso ajudar você hoje?",
+                                "Oi! Estou aqui para ajudar. Em que posso ser útil?",
+                                "E aí! Como posso ajudar você hoje?",
+                                "Oi, tudo bem? Como posso ser útil para você?",
+                                "Olá! Estou à disposição para ajudar. O que você precisa?"
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "tudo bem?":
+                        case "tudo bom?":
+                        case "blz":
+                        case "beleza":
+                        case "suave?":
+                            var responses = [
+                                "Tudo bem e com você?",
+                                "Estou bem, obrigado por perguntar! E você?",
+                                "Blz! E você, tudo certo?",
+                                "Tudo tranquilo por aqui. E contigo?",
+                                "Estou bem, obrigado! E você, como está?"
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "bom dia":
+                        case "dia":
+                        case "buenos dias":
+                        case " bm dia":
+
+                            var responses = [
+                                "Bom dia! Como posso ajudar você hoje?",
+                                "Bom dia! Estou disponível para tirar suas dúvidas sobre barragens.",
+                                "Dia! Precisa de alguma informação sobre barragens?",
+                                "Oi! Que tal começarmos o dia falando sobre barragens?",
+                                "E aí, bom dia! Em que posso ser útil para você hoje?"
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "boa tarde":
+                        case "tarde":
+                            var responses = [
+                                "Boa tarde! Posso fornecer informações sobre barragens se precisar.",
+                                "Boa tarde! Como posso ajudar você?",
+                                "Tarde! Estou aqui para responder suas perguntas sobre barragens.",
+                                "E aí, boa tarde! Tem alguma dúvida sobre barragens?",
+                                "Oi! Boa tarde! Em que posso ser útil para você?"
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "boa noite":
+                        case "noite":
+                            var responses = [
+                                "Boa noite! Estou aqui para ajudar você. O que deseja?",
+                                "Boa noite! Se precisar de informações sobre barragens, é só me chamar.",
+                                "Noite! Como posso ser útil para você agora?",
+                                "Oi! Boa noite! Em que posso ajudar você?",
+                                "E aí, boa noite! Como posso ajudar você agora?"
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "até logo":
+                        case "flw":
+                            var responses = [
+                                "Até logo! Se precisar de mais alguma coisa, estou à disposição.",
+                                "Flw! Estarei aqui se precisar de mais alguma informação.",
+                                "Até mais! Não hesite em me chamar se precisar de ajuda.",
+                                "Tchau! Estou disponível sempre que precisar.",
+                                "Até logo! Se precisar de assistência adicional, estarei por aqui."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "tchau":
+                        case "bye":
+                        case "xau":
+                        case "txau":
+                        case "chau":
+                            var responses = [
+                                "Tchau! Estou aqui para ajudar sempre que precisar.",
+                                "Tchau! Se precisar de mais alguma coisa, estarei por aqui.",
+                                "Até mais! Estou à disposição para qualquer outra dúvida que surgir.",
+                                "Falou! Se precisar de mais informações, estou aqui para ajudar.",
+                                "Até mais tarde! Não hesite em me chamar se precisar de mais alguma coisa."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "como você pode me ajudar?":
+                        case "você pode me ajudar?":
+                        case "me ajuda aí":
+                        case "help":
+                        case "ajuda":
+                        case "socorro":
+                            var responses = [
+                                "Estou aqui para fornecer informações e orientações sobre barragens. Se tiver alguma dúvida, é só perguntar!",
+                                "Posso ajudar fornecendo informações sobre barragens e segurança hídrica. Do que você precisa?",
+                                "Claro! Estou à disposição para ajudar com informações sobre barragens e medidas de segurança.",
+                                "Posso ajudar fornecendo orientações sobre barragens e prevenção de riscos. O que você precisa?",
+                                "Estou aqui para ajudar! Se tiver dúvidas sobre barragens, é só perguntar."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "oque você faz?":
+                        case "o que você faz?":
+                        case "vc faz o que?":
+                            var responses = [
+                                "Eu sou o Dam Alert, um assistente virtual projetado para fornecer informações sobre barragens e segurança hídrica.",
+                                "Meu propósito é fornecer informações e orientações sobre barragens para garantir a segurança hídrica e prevenir acidentes.",
+                                "Eu sou um assistente virtual programado para ajudar com informações sobre barragens e medidas de segurança.",
+                                "Estou aqui para fornecer informações úteis sobre barragens e responder às suas perguntas relacionadas ao assunto.",
+                                "Meu objetivo é ajudar a esclarecer dúvidas e fornecer informações sobre barragens e segurança hídrica."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "você é um robô?":
+                        case "é um robô?":
+                        case "vc é bot?":
+                            var responses = [
+                                "Sim, sou um assistente virtual programado para ajudar com informações sobre barragens.",
+                                "Correto! Sou um bot criado para fornecer informações sobre barragens e segurança hídrica.",
+                                "Sim, sou um robô projetado para ajudar com questões relacionadas a barragens e prevenção de riscos.",
+                                "Isso mesmo! Sou um assistente virtual criado para fornecer orientações sobre barragens e medidas de segurança.",
+                                "Sim, sou um bot desenvolvido para auxiliar com informações sobre barragens e prevenção de acidentes."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "tem alguém aí?":
+                        case "tem alguém?":
+                        case "alguém?":
+                            var responses = [
+                                "Sim, estou aqui! Como posso ajudar você?",
+                                "Estou aqui para ajudar! O que você precisa?",
+                                "Presente! Como posso ser útil para você?",
+                                "Oi! Estou disponível para responder suas perguntas sobre barragens.",
+                                "Estou aqui! Posso fornecer informações sobre barragens e segurança hídrica."
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        case "me ajuda":
+                        case "ajuda aí":
+                        case "to perdido":
+                            var responses = [
+                                "Claro, estou aqui para ajudar. Qual é a sua dúvida?",
+                                "Estou à disposição para ajudar. O que você precisa?",
+                                "Pode contar comigo! Em que posso ajudar?",
+                                "Estou aqui para ajudar no que for necessário. O que aconteceu?",
+                                "Não se preocupe, estou aqui para ajudar. O que posso fazer por você?"
+                            ];
+                            botResponse.textContent = responses[Math.floor(Math.random() * responses.length)];
+                            break;
+                        default:
+                            // Mensagem padrão para qualquer outra mensagem do usuário
+                            var randomResponses = [
+                                "Desculpe, não entendi.",
+                                "Não tenho certeza do que você quis dizer.",
+                                "Posso ajudar com mais alguma coisa?",
+                                "Precisa de assistência com mais alguma coisa?",
+                                "Desculpe, não tenho resposta para isso. "
+                            ];
+                            botResponse.textContent = randomResponses[Math.floor(Math.random() * randomResponses.length)];
+                    }
+
+                    botMessage.appendChild(botPhoto);
+                    botMessage.appendChild(botResponse);
+                    chatBody.appendChild(botMessage);
+                }, 1000);
+
+                messageInput.value = "";
+                messageInput.focus();
+            }
+        }
+    </script>
+</body>
+</html>

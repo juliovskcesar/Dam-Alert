@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAM ALERT</title>
+<link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    h3 {
+        margin-bottom: 10px;
+    }
+    
+    ol {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    
+</style>
+<link rel="stylesheet" href="menu1.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <input type="checkbox" id="checkbox">
+    <label class="btn" for="checkbox"><i class="fa fa-bars"></i><span color>Menu</span></label>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="sidebar">
+        <ul>
+            <li><a href="menu.html"><i class="fa fa-lightbulb-o"></i>Voltar ao Menu</a></li>
+            <li><a href="pagstartup.html"><i class="fa fa-globe"></i>Mapa de barragens</a></li>
+            <li><a href="videos.html"><i class="fa fa-tachometer"></i>Quiz</a></li>
+            <li><a href="sensor.html" class="fa fa-lightbulb-o"><i class="fa fa-line-chart"></i>Nossos Produtos</a></li>
+            <li><a href="imagens.html"><i class="fa fa-television"></i>Imagens</a></li>
+            <li><a href="notificacoes.html"><i class="fa fa-send"></i>Notificações</a></li>
+            <li><a href="tempo.html"><i class="fa fa-wpforms"></i>Tempo</a></li>
+            <li><a href="baragens.html"><i class="fa fa-paint-brush"></i>Sobre Barragens</a></li>
+            <li><a href="quemnossomos.html"><i class="fa fa-file-text-o"></i>Quem nós somos</a></li>
+        </ul>
+    </div>
+
+<div class="container">
+    <h1>Quiz sobre Barragens</h1>
+
+    <form id="quiz-form" onsubmit="return checkAnswers()">
+        <ol>
+            <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz sobre Barragens</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <form id="quiz-form">
+        <ol>
+            <li>
+                <h3>Qual é o propósito principal de uma barragem?</h3>
+                <input type="radio" name="q1" value="a"> A) Armazenar água<br>
+                <input type="radio" name="q1" value="b"> B) Gerar energia<br>
+                <input type="radio" name="q1" value="c"> C) Evitar enchentes<br>
+                <input type="radio" name="q1" value="d"> D) Todas as anteriores<br>
+            </li>
+            <li>
+                <h3>Qual é o principal material usado na construção de barragens de concreto?</h3>
+                <input type="radio" name="q2" value="a"> A) Aço<br>
+                <input type="radio" name="q2" value="b"> B) Madeira<br>
+                <input type="radio" name="q2" value="c"> C) Concreto<br>
+                <input type="radio" name="q2" value="d"> D) Plástico<br>
+            </li>
+            <li>
+                <h3>Quais são os principais riscos associados às barragens?</h3>
+                <input type="checkbox" name="q3a" value="a"> A) Ruptura<br>
+                <input type="checkbox" name="q3b" value="b"> B) Inundação<br>
+                <input type="checkbox" name="q3c" value="c"> C) Deslizamento<br>
+                <input type="checkbox" name="q3d" value="d"> D) Todos os anteriores<br>
+            </li>
+            <li>
+                <h3>O que é um plano de evacuação?</h3>
+                <input type="radio" name="q4" value="a"> A) Um plano para construção de barragens<br>
+                <input type="radio" name="q4" value="b"> B) Um plano para monitoramento de barragens<br>
+                <input type="radio" name="q4" value="c"> C) Um plano para evacuar pessoas em caso de emergência<br>
+                <input type="radio" name="q4" value="d"> D) Um plano para manutenção de barragens<br>
+            </li>
+            <li>
+                <h3>Qual é o principal tipo de barragem usada para armazenamento de água potável?</h3>
+                <input type="radio" name="q5" value="a"> A) Barragem de concreto<br>
+                <input type="radio" name="q5" value="b"> B) Barragem de terra<br>
+                <input type="radio" name="q5" value="c"> C) Barragem de enrocamento<br>
+                <input type="radio" name="q5" value="d"> D) Barragem de aterro<br>
+            </li>
+        </ol>
+        <li>
+            <h3>Quais são os principais componentes de uma barragem de terra?</h3>
+            <input type="radio" name="q6" value="a"> A) Concreto e aço<br>
+            <input type="radio" name="q6" value="b"> B) Terra e rochas<br>
+            <input type="radio" name="q6" value="c"> C) Madeira e plástico<br>
+            <input type="radio" name="q6" value="d"> D) Vidro e metal<br>
+        </li>
+        <li>
+            <h3>Qual é o principal objetivo de uma barragem de rejeitos de mineração?</h3>
+            <input type="radio" name="q7" value="a"> A) Armazenar água<br>
+            <input type="radio" name="q7" value="b"> B) Gerar energia<br>
+            <input type="radio" name="q7" value="c"> C) Armazenar resíduos<br>
+            <input type="radio" name="q7" value="d"> D) Evitar enchentes<br>
+        </li>
+        <li>
+            <h3>O que é um vertedouro de barragem?</h3>
+            <input type="radio" name="q8" value="a"> A) Uma abertura para escoamento de água<br>
+            <input type="radio" name="q8" value="b"> B) Um tipo de comporta<br>
+            <input type="radio" name="q8" value="c"> C) Um dispositivo para gerar energia<br>
+            <input type="radio" name="q8" value="d"> D) Uma área de estocagem de resíduos<br>
+        </li>
+        <li>
+            <h3>Como são classificadas as barragens de acordo com sua função?</h3>
+            <input type="radio" name="q9" value="a"> A) Barragens de concreto e barragens de terra<br>
+            <input type="radio" name="q9" value="b"> B) Barragens de retenção e barragens de rejeitos<br>
+            <input type="radio" name="q9" value="c"> C) Barragens de contenção e barragens de armazenamento<br>
+            <input type="radio" name="q9" value="d"> D) Barragens de geração de energia e barragens de abastecimento de água<br>
+        </li>
+        <li>
+            <h3>Por que as barragens podem representar um risco para o meio ambiente?</h3>
+            <input type="checkbox" name="q10a" value="a"> A) Alterações no ecossistema aquático<br>
+            <input type="checkbox" name="q10b" value="b"> B) Deslocamento da fauna e flora<br>
+            <input type="checkbox" name="q10c" value="c"> C) Liberação de poluentes<br>
+            <input type="checkbox" name="q10d" value="d"> D) Todos os anteriores<br>
+        </li>
+        <li>
+            <h3>O que é uma barragem de ensecadeira?</h3>
+            <input type="radio" name="q11" value="a"> A) Uma barragem temporária<br>
+            <input type="radio" name="q11" value="b"> B) Uma barragem de pequeno porte<br>
+            <input type="radio" name="q11" value="c"> C) Uma barragem flutuante<br>
+            <input type="radio" name="q11" value="d"> D) Uma barragem subterrânea<br>
+        </li>
+        <li>
+            <h3>Quais são os principais métodos de controle de erosão em barragens?</h3>
+            <input type="checkbox" name="q12a" value="a"> A) Cobertura vegetal<br>
+            <input type="checkbox" name="q12b" value="b"> B) Gabiões<br>
+            <input type="checkbox" name="q12c" value="c"> C) Terraplenagem<br>
+            <input type="checkbox" name="q12d" value="d"> D) Todos os anteriores<br>
+        </li>
+        <li>
+            <h3>O que é uma barragem de encaixe?</h3>
+            <input type="radio" name="q13" value="a"> A) Uma barragem de concreto<br>
+            <input type="radio" name="q13" value="b"> B) Uma barragem de terra compactada<br>
+            <input type="radio" name="q13" value="c"> C) Uma barragem submersa<br>
+            <input type="radio" name="q13" value="d"> D) Uma barragem para contenção de resíduos<br>
+        </li>
+        <li>
+            <h3>Qual é o principal método de construção de barragens de enrocamento?</h3>
+            <input type="radio" name="q14" value="a"> A) Lançamento de concreto<br>
+            <input type="radio" name="q14" value="b"> B) Aterro compactado<br>
+            <input type="radio" name="q14" value="c"> C) Utilização de rochas e pedras<br>
+            <input type="radio" name="q14" value="d"> D) Fundação profunda<br>
+        </li>
+        <li>
+            <h3>O que é uma barragem de enrocamento compactado?</h3>
+            <input type="radio" name="q15" value="a"> A) Uma barragem de terra compactada<br>
+            <input type="radio" name="q15" value="b"> B) Uma barragem de concreto<br>
+            <input type="radio" name="q15" value="c"> C) Uma barragem de enrocamento com rochas compactadas<br>
+            <input type="radio" name="q15" value="d"> D) Uma barragem de aterro<br>
+        </li>
+    </ol>
+    <a href="gabarito.html"><span>Conferir Resultados</span></a>
+</form>
+</div>
+
+<script>
+function checkAnswers() {
+var form = document.getElementById('quiz-form');
+var totalQuestions = 20; // Total de questões no quiz
+var correctAnswers = 0;
+
+// Respostas corretas para cada pergunta
+var answers = {
+    q1: 'd',
+    q2: 'c',
+    q3: ['a', 'b', 'c'],
+    q4: 'c',
+    q5: 'a',
+    q6: 'b',
+    q7: 'c',
+    q8: 'a',
+    q9: 'c',
+    q10: ['a', 'b', 'c', 'd'],
+    q11: 'a',
+    q12: ['a', 'b', 'c', 'd'],
+    q13: 'd',
+    q14: 'c',
+    q15: 'c'
+    // Adicione as respostas corretas para as novas perguntas aqui
+};
+
+// Loop para verificar cada pergunta
+for (var i = 1; i <= totalQuestions; i++) {
+    var questionName = 'q' + i;
+    var selectedAnswer = null;
+
+    // Verifica se a pergunta é de múltipla escolha ou checkbox
+    if (form[questionName].type === 'radio') {
+        if (form[questionName].checked) {
+            selectedAnswer = form[questionName].value;
+        }
+    } else if (form[questionName].type === 'checkbox') {
+        var checkboxes = form.querySelectorAll('input[name="' + questionName + '"]:checked');
+        selectedAnswer = Array.from(checkboxes).map(function(checkbox) {
+            return checkbox.value;
+        });
+    }
+
+    // Verifica se a resposta selecionada é correta
+    if (Array.isArray(answers[questionName])) {
+        // Verifica respostas de checkbox
+        if (selectedAnswer && selectedAnswer.length === answers[questionName].length) {
+            var isCorrect = true;
+            for (var j = 0; j < selectedAnswer.length; j++) {
+                if (!answers[questionName].includes(selectedAnswer[j])) {
+                    isCorrect = false;
+                    break;
+                }
+            }
+            if (isCorrect) {
+                correctAnswers++;
+            }
+        }
+    } else {
+        // Verifica respostas de radio
+        if (selectedAnswer === answers[questionName]) {
+            correctAnswers++;
+        }
+    }
+}
+
+// Exibe o número de respostas corretas ao usuário
+alert('Você acertou ' + correctAnswers + ' de ' + totalQuestions + ' questões.');
+
+// Impede o envio do formulário
+return false;
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
+
+        
